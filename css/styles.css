@@ -553,7 +553,7 @@ body {
     background-repeat: no-repeat;
   }
 
-  .location-point {
+  /* .location-point {
     position: absolute;
     left: 223px;
     bottom: 93px;
@@ -562,7 +562,7 @@ body {
     height: 90px;
     line-height: 0;
     font-size: 0;
-  }
+  } */
 }
 
 /* FOOTER STYLES ===================== */
@@ -661,9 +661,6 @@ body {
     border-radius: 5px;
   }
 
-  .social-link-icon {
-  }
-
   .footer-list-wrapper {
     display: flex;
   }
@@ -672,5 +669,73 @@ body {
     display: flex;
     gap: 15px;
     margin-left: auto;
+  }
+}
+
+/* Locator Point Animation  */
+
+.location_small {
+  position: absolute;
+  left: 108px;
+  bottom: 98px;
+  width: 26px;
+  height: 26px;
+  background-color: #65a6ff;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  z-index: 120;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+}
+.location_middle {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(101, 166, 255, 0.1);
+  left: 90px;
+  bottom: 82px;
+  z-index: 105;
+}
+@keyframes puls {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.location_large {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(101, 166, 255, 0.2);
+  left: 85px;
+  bottom: 77px;
+  animation: 1s puls infinite;
+  z-index: 110;
+}
+@media only screen and (min-width: 768px) {
+  .location_small {
+    left: 258px;
+    bottom: 130px;
+  }
+  .location_middle {
+    left: 240px;
+    bottom: 113px;
+  }
+  @keyframes puls {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .location_large {
+    left: 235px;
+    bottom: 108px;
   }
 }

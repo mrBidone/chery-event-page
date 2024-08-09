@@ -1,0 +1,47 @@
+<div class="history__line_dot">
+                            <div class="dot__small"></div>
+                            <div class="dot__middle"></div>
+                            <div class="dot__large"></div>
+                        </div>
+
+<!-- .history**line_dot {
+position: relative;
+}
+.dot**small {
+position: absolute;
+top: -5px;
+right: 7.5%;
+width: 10px;
+height: 10px;
+background-color: #89E13E;
+border-radius: 50%;
+}
+.dot**middle {
+position: absolute;
+content: '';
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background-color: rgba(137, 225, 62, 0.2);
+top: -10px;
+right: calc( 7.5% - 5px);
+}
+@keyframes puls {
+0% {
+transform: scale(0);
+}
+100% {
+transform: scale(1);
+}
+}
+.dot**large {
+position: absolute;
+content: '';
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background-color: rgba(137, 225, 62, 0.1);
+top: -15px;
+right: calc( 7.5% - 10px);
+animation: 1s puls infinite;
+} -->
