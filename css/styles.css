@@ -1,0 +1,634 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* RESET STYLES ======================== */
+
+/* MAIN STYLES ========================= */
+body {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.67;
+  color: #000;
+  background-color: #808080;
+}
+
+.bg-img-thumb {
+  background-image: url("../img/mob/bg-mob.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 345px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 20px 30px;
+  background-color: #ffffff;
+}
+
+@media only screen and (min-width: 1440px) {
+  .bg-img-thumb {
+    background-image: url("../img/desk/bg-desk.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container {
+    max-width: 622px;
+  }
+
+  .section {
+    padding: 30px 60px;
+  }
+}
+/* HEADER STYLES ========================== */
+.header {
+  padding: 50px 0 40px 0;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  height: 43px;
+}
+
+.nav-list-item:not(:last-child) {
+  padding: 14px 30px 14px 2px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header-list-icon {
+  line-height: 0;
+}
+
+.chery-logo,
+.chery-logo-icon {
+  width: 138px;
+  height: 16px;
+}
+
+.koinot-logo,
+.koinot-logo-icon {
+  width: 55px;
+  height: 21px;
+}
+
+.header-call-btn {
+  display: none;
+}
+.button-desc {
+  display: none;
+}
+@media only screen and (min-width: 1440px) {
+  .header {
+    padding: 60px 0 55px 0;
+  }
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 56px;
+  }
+
+  .nav-list-item:not(:last-child) {
+    padding: 20px 30px 20px 2px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .chery-logo,
+  .chery-logo-icon {
+    width: 178px;
+    height: 16px;
+  }
+
+  .koinot-logo,
+  .koinot-logo-icon {
+    width: 71px;
+    height: 27px;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-call-btn {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 45px;
+    border-radius: 50px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-left: auto;
+  }
+
+  .header-btn-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+  }
+
+  .call-btn-text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.92;
+    color: #fff;
+  }
+  .button-desc {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    line-height: 1.1;
+    color: #d07a7b;
+  }
+}
+
+/* HERO STYLES ======================== */
+
+.hero-img-thumb {
+  border-radius: 15px 15px 0 0;
+  padding: 278px 30px 43px 30px;
+  background-color: rgb(34, 30, 30);
+  background-image: url("../img/mob/hero-img-mob.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.date-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  padding: 20px 0 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.date-wrapper::before {
+  display: block;
+  content: "";
+  background-image: url(../img/svg/сalendar.svg);
+  background-size: 21px;
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 21px;
+}
+.list-date-item {
+}
+.list-title {
+  font-size: 13px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.5);
+}
+.list-desc {
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+}
+.list-time {
+}
+.list-time-item {
+}
+
+@media only screen and (min-width: 1440px) {
+  .hero-img-thumb {
+    border-radius: 20px 20px 0 0;
+    padding: 323px 66px 44px 60px;
+    background-color: rgb(34, 30, 30);
+    background-image: url("../img/desk/hero-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .date-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    padding: 20px 0 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .date-wrapper::before {
+    display: block;
+    content: "";
+    background-image: url(../img/svg/сalendar.svg);
+    background-size: 21px;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+  }
+  .list-date-item {
+  }
+  .list-title {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .list-desc {
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+  }
+  .list-time {
+  }
+  .list-time-item {
+  }
+}
+
+/* INVITATION STYLES ======================= */
+
+.invitation .section {
+  padding-top: 40px;
+}
+
+.main-title {
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.invitation-list {
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accent-text {
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 1440px) {
+  .invitation .section {
+    padding-top: 63px;
+  }
+
+  .main-title {
+    font-weight: 900;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .invitation-list {
+    line-height: 1.67;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+/* INVITE-FORMS STYLES =================== */
+
+.section-title {
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 17px;
+  line-height: 1.2;
+}
+
+.section-desc {
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-style {
+  width: 255px;
+  max-height: 65px;
+  padding: 20px 22px;
+  line-height: 1.67;
+  border: 1px solid #8a989f;
+  border-radius: 5px;
+}
+
+.form-style::placeholder {
+  color: #8a989f;
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 255px;
+  min-height: 75px;
+  border-radius: 5px;
+  border: none;
+  background-color: #8a989f;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  line-height: 1.67;
+  color: #fff;
+}
+
+@media only screen and (min-width: 1440px) {
+  .section-title {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .section-desc {
+    line-height: 1.67;
+  }
+
+  .form-list {
+    gap: 15px;
+    margin-bottom: 35px;
+  }
+
+  .form-style {
+    width: 472px;
+    max-height: 75px;
+    padding: 25px 30px;
+  }
+
+  .submit-btn {
+    width: 250px;
+    min-height: 75px;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+}
+
+/* PROGRAM STYLES ================== */
+
+.program-title {
+  margin-bottom: 20px;
+}
+
+.program-list-item {
+  display: flex;
+  padding: 20px 0;
+}
+.program-list-item:not(:last-child) {
+  border-bottom: 1px solid #dadada;
+}
+.program-time {
+  margin-right: 15px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .program-title {
+    margin-bottom: 10px;
+  }
+
+  .program-time {
+    margin-right: 50px;
+  }
+}
+
+/* PLACE-IVENT STYLES ==================== */
+
+.place-ivent .section {
+  border-radius: 0 0 15px 15px;
+  padding-top: 20px;
+}
+
+.place-ivent-title {
+  margin-bottom: 20px;
+}
+
+.place-desc {
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.adress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  padding-bottom: 174px;
+}
+
+.adress-list-item {
+  display: flex;
+}
+
+.adress-list-item::before {
+  display: block;
+  content: "";
+  margin-right: 15px;
+  width: 25px;
+  height: 25px;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 18px;
+  background-color: #b6b6b6;
+}
+
+.list-point-icon::before {
+  background-image: url(../img/svg/locator.svg);
+}
+
+.list-tel-icon::before {
+  background-image: url(../img/svg/tel.svg);
+}
+
+.adress-desc {
+  max-width: 200px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.bg-thumb {
+  position: relative;
+  background-image: url(../img/mob/location-map-mob@2x.jpg);
+  background-position: bottom;
+  background-size: 315px 280px;
+  background-repeat: no-repeat;
+}
+
+.location-point {
+  position: absolute;
+  left: 73px;
+  bottom: 60px;
+
+  width: 90px;
+  height: 90px;
+  line-height: 0;
+  font-size: 0;
+}
+
+@media only screen and (min-width: 1440px) {
+  .place-ivent .section {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .place-ivent-title {
+    margin-bottom: 30px;
+    max-width: 300px;
+  }
+
+  .place-desc {
+    max-width: 350px;
+    margin-bottom: 30px;
+  }
+
+  .adress-list {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    padding-bottom: 152px;
+  }
+
+  .adress-list-item {
+    display: flex;
+  }
+
+  .adress-list-item::before {
+    display: block;
+    content: "";
+    margin-right: 15px;
+    width: 25px;
+    height: 25px;
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 18px;
+    background-color: #b6b6b6;
+  }
+
+  .list-point-icon::before {
+    background-image: url(../img/svg/locator.svg);
+  }
+
+  .list-tel-icon::before {
+    background-image: url(../img/svg/tel.svg);
+  }
+
+  .adress-desc {
+    max-width: 350px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .bg-thumb {
+    position: relative;
+    background-image: url(../img/desk/location-map-desk@2x.jpg);
+    background-position: bottom;
+    background-size: 591px 380px;
+    background-repeat: no-repeat;
+  }
+
+  .location-point {
+    position: absolute;
+    left: 223px;
+    bottom: 93px;
+
+    width: 90px;
+    height: 90px;
+    line-height: 0;
+    font-size: 0;
+  }
+}
+
+/* FOOTER STYLES ===================== */
+
+.footer {
+  padding: 30px 0 60px 0;
+}
+
+.footer .nav-list {
+  margin-bottom: 20px;
+}
+
+.footer .nav-list-item:not(:last-child) {
+  padding: 15px 23px 15px 2px;
+}
+.header-links-icon {
+}
+.footer-chery-logo,
+.footer-chery-logo-icon {
+  width: 138px;
+  height: 13px;
+}
+
+.footer-koinot-logo,
+.footer-koinot-logo-icon {
+  width: 55px;
+  height: 21px;
+}
+.footer-desc-list {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.2);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin-bottom: 33px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 15px;
+}
+.social-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+.social-link-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  stroke: #fff;
+}
+
+.social-link-svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  stroke: red;
+}
