@@ -157,6 +157,7 @@ body {
   .nav-wrapper {
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
   }
 
   .header-call-btn {
