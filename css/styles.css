@@ -1,3 +1,7 @@
+html {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -46,15 +50,15 @@ body {
   font-family: "Mulish", sans-serif;
   font-weight: 400;
   font-size: 15px;
-  line-height: 1.67;
   color: #000;
-  background-color: #808080;
+  background-color: #ca0100;
 }
 
 .bg-img-thumb {
   background-image: url("../img/mob/bg-mob.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  background-position: bottom 20px;
 }
 
 .container {
@@ -72,7 +76,7 @@ body {
   .bg-img-thumb {
     background-image: url("../img/desk/bg-desk.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
   }
 
   .container {
@@ -583,8 +587,7 @@ body {
 .footer .nav-list-item:not(:last-child) {
   padding: 15px 23px 15px 2px;
 }
-.header-links-icon {
-}
+
 .footer-chery-logo,
 .footer-chery-logo-icon {
   width: 138px;
@@ -606,29 +609,77 @@ body {
   margin-bottom: 33px;
 }
 
-.footer-social-list {
+.footer-social-list-mob {
   display: flex;
   gap: 15px;
 }
-.social-list-item {
+
+.social-link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 45px;
   height: 45px;
-  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .social-link-icon {
-  display: block;
-  width: 18px;
-  height: 18px;
-  stroke: #fff;
+  fill: #fff;
 }
 
-.social-link-svg {
-  display: block;
-  width: 18px;
-  height: 18px;
-  stroke: red;
+.footer-social-list-desk {
+  display: none;
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer {
+    padding: 60px 0 131px 0;
+  }
+
+  .footer .nav-list {
+    margin-bottom: 33px;
+  }
+
+  .footer .nav-list-item:not(:last-child) {
+    padding: 15px 23px 15px 2px;
+  }
+
+  .footer-chery-logo,
+  .footer-chery-logo-icon {
+    width: 198px;
+    height: 18px;
+  }
+
+  .footer-koinot-logo,
+  .footer-koinot-logo-icon {
+    width: 70px;
+    height: 35px;
+  }
+  .footer-desc-list {
+    gap: 20px;
+    margin-bottom: 0;
+  }
+
+  .footer-social-list-mob {
+    display: none;
+  }
+
+  .social-link {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+  }
+
+  .social-link-icon {
+  }
+
+  .footer-list-wrapper {
+    display: flex;
+  }
+
+  .footer-social-list-desk {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+  }
 }
