@@ -233,10 +233,6 @@ body {
   font-size: 15px;
   color: #fff;
 }
-.list-time {
-}
-.list-time-item {
-}
 
 @media only screen and (min-width: 1440px) {
   .hero-img-thumb {
@@ -265,8 +261,6 @@ body {
     width: 21px;
     height: 21px;
   }
-  .list-date-item {
-  }
   .list-title {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.5);
@@ -275,10 +269,6 @@ body {
     font-weight: 700;
     font-size: 15px;
     color: #fff;
-  }
-  .list-time {
-  }
-  .list-time-item {
   }
 }
 
