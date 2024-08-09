@@ -171,6 +171,11 @@ body {
     color: #fff;
     background-color: rgba(255, 255, 255, 0.1);
     margin-left: auto;
+    transition: background-color 300ms linear;
+  }
+
+  .header-call-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
   }
 
   .header-btn-icon {
@@ -389,6 +394,11 @@ body {
     min-height: 75px;
     border-radius: 5px;
     margin: 0 auto;
+    cursor: pointer;
+    transition: background-color 300ms linear;
+  }
+  .submit-btn:hover {
+    background-color: #9faeb5;
   }
 }
 
@@ -552,17 +562,6 @@ body {
     background-size: 591px 380px;
     background-repeat: no-repeat;
   }
-
-  /* .location-point {
-    position: absolute;
-    left: 223px;
-    bottom: 93px;
-
-    width: 90px;
-    height: 90px;
-    line-height: 0;
-    font-size: 0;
-  } */
 }
 
 /* FOOTER STYLES ===================== */
@@ -592,7 +591,7 @@ body {
 }
 .footer-desc-list {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.4);
+  color: #ff7979;
   line-height: 1.5;
   display: flex;
   flex-direction: column;
@@ -624,7 +623,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .footer {
-    padding: 60px 0 131px 0;
+    padding: 60px 0 60px 0;
   }
 
   .footer .nav-list {
@@ -667,8 +666,14 @@ body {
 
   .footer-social-list-desk {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     margin-left: auto;
+  }
+  .footer-social-list-desk .social-link {
+    transition: background-color 300ms linear;
+  }
+  .footer-social-list-desk .social-link:hover {
+    background-color: rgba(255, 255, 255, 0.35);
   }
 }
 
