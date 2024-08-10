@@ -348,12 +348,53 @@ body {
   font-size: 16px;
   border: 1px solid #8a989f;
   border-radius: 5px;
-  color: #8a989f;
+  /* color: #8a989f; */
   outline: none;
 }
 
 .form-style::placeholder {
   color: #8a989f;
+}
+
+/* Customs select-form */
+.select {
+  display: block;
+  overflow: hidden;
+  height: 65px;
+  width: 100%;
+  position: relative;
+  font-size: 16px;
+}
+
+.select-control {
+  height: 65px;
+  padding: 20px 0 20px 22px;
+  border: 1px solid #8a989f;
+  border-radius: 5px;
+  color: #8a989f;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.select-icon {
+  position: absolute;
+  right: 30px;
+  top: 26px;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/svg/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  pointer-events: none;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .submit-btn {
