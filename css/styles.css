@@ -171,7 +171,7 @@ body {
     color: #fff;
     background-color: rgba(255, 255, 255, 0.1);
     margin-left: auto;
-    transition: background-color 300ms linear;
+    transition: background-color 200ms linear;
   }
 
   .header-call-btn:hover {
@@ -364,6 +364,11 @@ body {
   width: 100%;
   position: relative;
   font-size: 16px;
+  line-height: 1.67;
+  font-weight: 500;
+}
+.select-desk {
+  display: none;
 }
 
 .select-control {
@@ -377,6 +382,7 @@ body {
   appearance: none;
   box-sizing: border-box;
   outline: none;
+  background-color: #ffffff;
 }
 
 .select-icon {
@@ -430,7 +436,50 @@ body {
   .form-style {
     width: 472px;
     max-height: 75px;
-    padding: 25px 30px;
+    padding: 25px 10px 25px 30px;
+  }
+
+  .select {
+    display: block;
+    overflow: hidden;
+    height: 75px;
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+  }
+  .select-desk {
+    display: none;
+  }
+
+  .select-control {
+    height: 75px;
+    padding: 25px 0 25px 30px;
+  }
+
+  .select-icon {
+    position: absolute;
+    right: 30px;
+    top: 31px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../img/svg/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    pointer-events: none;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .select-mob {
+    display: none;
+  }
+
+  .select-desk {
+    display: block;
   }
 
   .submit-btn {
@@ -439,7 +488,7 @@ body {
     border-radius: 5px;
     margin: 0 auto;
     cursor: pointer;
-    transition: background-color 300ms linear;
+    transition: background-color 200ms linear;
   }
   .submit-btn:hover {
     background-color: #9faeb5;
@@ -714,7 +763,7 @@ body {
     margin-left: auto;
   }
   .footer-social-list-desk .social-link {
-    transition: background-color 300ms linear;
+    transition: background-color 200ms linear;
   }
   .footer-social-list-desk .social-link:hover {
     background-color: rgba(255, 255, 255, 0.35);
