@@ -1,5 +1,6 @@
 const form = document.getElementById("tgForm");
 const submitBtn = document.getElementById("btnSendform");
+const messageBlock = document.getElementById("messageBlock");
 
 const TOKEN = "7276650181:AAHlTP9WN0aK8GLVjwMeYABk1uBDNyBc2Ik";
 const CHATT_ID = "-1002228237081";
@@ -54,8 +55,6 @@ form.addEventListener("submit", function (e) {
   }
   message += `<b>Test-Drive</b>: ${this.tgSelectDrive.value}\n`;
 
-  console.log(message);
-
   axios
     .post(URI_API, {
       chat_id: CHATT_ID,
@@ -65,8 +64,8 @@ form.addEventListener("submit", function (e) {
     .then((res) => {})
     .catch((err) => {})
     .finally(() => {
-      console.log("Конец");
       form.reset();
+      messageBlock.classList.remove("visually-hidden");
     });
 });
 
