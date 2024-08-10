@@ -55,7 +55,7 @@ body {
 }
 
 .bg-img-thumb {
-  background-image: url("../img/mob/bg-mob.png");
+  background-image: url("../img/mob/bg-mob.webp");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: bottom 20px;
@@ -74,7 +74,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .bg-img-thumb {
-    background-image: url("../img/desk/bg-desk.png");
+    background-image: url("../img/desk/bg-desk.webp");
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -205,7 +205,7 @@ body {
   border-radius: 15px 15px 0 0;
   padding: 278px 30px 43px 30px;
   background-color: rgb(34, 30, 30);
-  background-image: url("../img/mob/hero-img-mob.jpg");
+  background-image: url("../img/mob/hero-img-mob.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -221,7 +221,7 @@ body {
 .date-wrapper::before {
   display: block;
   content: "";
-  background-image: url(../img/svg/сalendar.svg);
+  background-image: url("../img/svg/сalendar.svg");
   background-size: 21px;
   background-repeat: no-repeat;
   width: 21px;
@@ -245,7 +245,7 @@ body {
     border-radius: 20px 20px 0 0;
     padding: 323px 66px 44px 60px;
     background-color: rgb(34, 30, 30);
-    background-image: url("../img/desk/hero-img.jpg");
+    background-image: url("../img/desk/hero-img.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -261,7 +261,7 @@ body {
   .date-wrapper::before {
     display: block;
     content: "";
-    background-image: url(../img/svg/сalendar.svg);
+    background-image: url("../img/svg/сalendar.svg");
     background-size: 21px;
     background-repeat: no-repeat;
     width: 21px;
@@ -345,8 +345,11 @@ body {
   max-height: 65px;
   padding: 20px 22px;
   line-height: 1.67;
+  font-size: 16px;
   border: 1px solid #8a989f;
   border-radius: 5px;
+  color: #8a989f;
+  outline: none;
 }
 
 .form-style::placeholder {
@@ -470,11 +473,11 @@ body {
 }
 
 .list-point-icon::before {
-  background-image: url(../img/svg/locator.svg);
+  background-image: url("../img/svg/locator.svg");
 }
 
 .list-tel-icon::before {
-  background-image: url(../img/svg/tel.svg);
+  background-image: url("../img/svg/tel.svg");
 }
 
 .adress-desc {
@@ -485,7 +488,7 @@ body {
 
 .bg-thumb {
   position: relative;
-  background-image: url(../img/mob/location-map-mob@2x.jpg);
+  background-image: url("../img/mob/location-map-mob.webp");
   background-position: bottom;
   background-size: 315px 280px;
   background-repeat: no-repeat;
@@ -542,11 +545,11 @@ body {
   }
 
   .list-point-icon::before {
-    background-image: url(../img/svg/locator.svg);
+    background-image: url("../img/svg/locator.svg");
   }
 
   .list-tel-icon::before {
-    background-image: url(../img/svg/tel.svg);
+    background-image: url("../img/svg/tel.svg");
   }
 
   .adress-desc {
@@ -557,7 +560,7 @@ body {
 
   .bg-thumb {
     position: relative;
-    background-image: url(../img/desk/location-map-desk@2x.jpg);
+    background-image: url("../img/desk/location-map-desk.webp");
     background-position: bottom;
     background-size: 591px 380px;
     background-repeat: no-repeat;
