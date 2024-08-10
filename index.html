@@ -120,10 +120,11 @@
               Для обеспечения комфортной организации мероприятия, просим
               подтвердить ваше присутствие, заполнив форму ниже.
             </p>
-            <form action="">
+            <form action="" id="tgForm">
               <ul class="form-list">
                 <li>
                   <input
+                  name="tgInputName"
                     class="form-style input-form"
                     type="text"
                     placeholder="Имя и Фамилия участника"
@@ -131,34 +132,34 @@
                 </li>
                 <li>
                   <div class="select select-mob">
-                    <select class="select-control" name="" id="">
+                    <select class="select-control" name="tgSelectAvailableMob" id="">
                       <option value="10" selected>Ваше присутствие</option>
-                      <option value="11">Да, с удовольствием</option>
-                      <option value="12">Нет, к сожалению</option>
+                      <option value="Yes">Да, с удовольствием</option>
+                      <option value="No">Нет, к сожалению</option>
                     </select>
                     <span class="select-icon"></span>
                   </div>
                   <div class="select select-desk">
-                    <select class="select-control" name="" id="">
+                    <select class="select-control" name="tgSelectAvailableDesk" id="" >
                       <option value="101" selected>Сможете ли вы присутствовать</option>
-                      <option value="111">Да, с удовольствием</option>
-                      <option value="121">Нет, к сожалению</option>
+                      <option value="Yes">Да, с удовольствием</option>
+                      <option value="No">Нет, к сожалению</option>
                     </select>
                     <span class="select-icon"></span>
                   </div>
                 </li>
                 <li>
                   <div class="select">
-                  <select class="select-control" name="" id="">
+                  <select class="select-control" name="tgSelectDrive" id="">
                   <option value="20">Участие в тест-драйве</option>
-                  <option value="21">Буду участвовать</option>
-                  <option value="22">Не буду участвовать</option>
+                  <option value="Yes">Буду участвовать</option>
+                  <option value="No">Не буду участвовать</option>
                   </select>
                   <span class="select-icon"></span>
                   </div>
                 </li>
               </ul>
-              <button class="submit-btn" type="submit">Отправить</button>
+              <button id="btnSendform" class="submit-btn" type="submit">Отправить</button>
             </form>
           </div>
         </div>
@@ -320,5 +321,7 @@
         </ul>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
