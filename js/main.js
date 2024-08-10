@@ -25,10 +25,10 @@ form.addEventListener("submit", function (e) {
     );
     return;
   } else if (
-    availableMob !== "Yes" &&
-    availableMob !== "No" &&
-    availableDesk !== "Yes" &&
-    availableDesk !== "No"
+    availableMob !== "Да" &&
+    availableMob !== "Нет" &&
+    availableDesk !== "Да" &&
+    availableDesk !== "Нет"
   ) {
     submitBtn.classList.add("form-error");
     setTimeout(function () {
@@ -36,7 +36,7 @@ form.addEventListener("submit", function (e) {
     }, 1000);
     console.log("Ошибка: Не выбран обязательный вариант ");
     return;
-  } else if (driveParticipation !== "Yes" && driveParticipation !== "No") {
+  } else if (driveParticipation !== "Да" && driveParticipation !== "Нет") {
     submitBtn.classList.add("form-error");
     setTimeout(function () {
       submitBtn.classList.remove("form-error");
@@ -45,13 +45,13 @@ form.addEventListener("submit", function (e) {
     return;
   }
   submitBtn.classList.remove("form-error");
-  let message = `<b>Заявка на участие!</b>\n`;
+  let message = ``;
 
   message += `<b>Имя и Фамилия</b>: ${this.tgInputName.value}\n`;
-  if (availableMob === "Yes" || availableMob === "No") {
-    message += `<b>Присутствие</b>: ${availableMob}\n`;
-  } else if (availableDesk === "Yes" || availableDesk === "No") {
-    message += `<b>Присутствие</b>: ${availableDesk}\n`;
+  if (availableMob === "Да" || availableMob === "Нет") {
+    message += `<b>Участие</b>: ${availableMob}\n`;
+  } else if (availableDesk === "Да" || availableDesk === "Нет") {
+    message += `<b>Участие</b>: ${availableDesk}\n`;
   }
   message += `<b>Test-Drive</b>: ${this.tgSelectDrive.value}\n`;
 
@@ -96,7 +96,7 @@ form.addEventListener("submit", function (e) {
 
 //   selects.forEach((select) => {
 //     const value = select.value;
-//     if (value !== "Yes" && value !== "No") {
+//     if (value !== "Yes" && value !== "Нет") {
 //       submitBtn.classList.add("form-error");
 //       setTimeout(function () {
 //         submitBtn.classList.remove("form-error");
@@ -110,8 +110,8 @@ form.addEventListener("submit", function (e) {
 //   if (nameRegex.test(nameInput.value) && isSelectValid) {
 //     let message = `<b>Заявка на участие!</b>\n`;
 //     message += `<b>Имя и Фамилия</b>: ${nameInput.value}\n`;
-//     message += `<b>Присутствие (Моб)</b>: ${selectAvailableMob.value}\n`;
-//     message += `<b>Присутствие (Деск)</b>: ${selectAvailableDesk.value}\n`;
+//     message += `<b>Участие (Моб)</b>: ${selectAvailableMob.value}\n`;
+//     message += `<b>Участие (Деск)</b>: ${selectAvailableDesk.value}\n`;
 //     message += `<b>Test-Drive</b>: ${selectDrive.value}\n`;
 
 //     console.log(message);
@@ -148,8 +148,8 @@ form.addEventListener("submit", function (e) {
 
 //   let message = `<b>Заявка на участие!</b>\n`;
 //   message += `<b>Имя и Фамилия</b>: ${this.tgInputName.value}\n`;
-//   message += `<b>Присутствие</b>: ${this.tgSelectAvailableMob.value}\n`;
-//   message += `<b>Присутствие</b>: ${this.tgSelectAvailableDesk.value}\n`;
+//   message += `<b>Участие</b>: ${this.tgSelectAvailableMob.value}\n`;
+//   message += `<b>Участие</b>: ${this.tgSelectAvailableDesk.value}\n`;
 //   message += `<b>Test-Drive</b>: ${this.tgSelectDrive.value}\n`;
 
 //   console.log(message);
