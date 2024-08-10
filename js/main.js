@@ -69,136 +69,72 @@ form.addEventListener("submit", function (e) {
     });
 });
 
-// form.addEventListener("submit", function (e) {
-//   e.preventDefault(); // предотвращаем отправку формы до проверки
+// Получаем элементы
+const car = document.querySelector(".car");
+const section = document.querySelector(".car-section");
 
-//   const nameInput = document.querySelector('input[name="tgInputName"]');
-//   const selectAvailableMob = document.querySelector(
-//     'select[name="tgSelectAvailableMob"]'
-//   );
-//   const selectAvailableDesk = document.querySelector(
-//     'select[name="tgSelectAvailableDesk"]'
-//   );
-//   const selectDrive = document.querySelector('select[name="tgSelectDrive"]');
+// Функция для обновления позиции машины при скролле
+function updateCarPosition() {
+  // Высота окна и секции
+  const windowHeight = window.innerHeight;
+  const sectionTop = section.getBoundingClientRect().top;
+  const sectionHeight = section.offsetHeight;
 
-//   // Проверка имени
-//     const nameRegex = /^[a-zA-Zа-яА-ЯёЁ\s]+$/;
+  // Процент прокрутки внутри секции
+  const scrollPercentage = Math.min(
+    Math.max((windowHeight - sectionTop) / (windowHeight + sectionHeight), 0),
+    1
+  );
 
-//   if (!nameRegex.test(nameInput.value)) {
-//     submitBtn.classList.add("form-error"); // добавляем класс ошибки, если имя некорректное
-//   } else {
-//     submitBtn.classList.remove("form-error");
-//   }
+  // Смещение машины (от 100% до -100%)
+  const translateX = 100 - scrollPercentage * 200;
 
-//   // Проверка select элементов
-//   let isSelectValid = true;
-//   const selects = [selectAvailableMob, selectAvailableDesk, selectDrive];
+  // Обновляем стиль трансформации для машины
+  car.style.transform = `translateX(${translateX}%)`;
+}
 
-//   selects.forEach((select) => {
-//     const value = select.value;
-//     if (value !== "Yes" && value !== "Нет") {
-//       submitBtn.classList.add("form-error");
-//       setTimeout(function () {
-//         submitBtn.classList.remove("form-error");
-//       }, 1000);
-//     } else {
-//       submitBtn.classList.remove("form-error");
-//     }
-//   });
+// Привязываем функцию к событию скролла
+window.addEventListener("scroll", updateCarPosition);
 
-//   // Если все проверки пройдены, отправляем данные
-//   if (nameRegex.test(nameInput.value) && isSelectValid) {
-//     let message = `<b>Заявка на участие!</b>\n`;
-//     message += `<b>Имя и Фамилия</b>: ${nameInput.value}\n`;
-//     message += `<b>Участие (Моб)</b>: ${selectAvailableMob.value}\n`;
-//     message += `<b>Участие (Деск)</b>: ${selectAvailableDesk.value}\n`;
-//     message += `<b>Test-Drive</b>: ${selectDrive.value}\n`;
+// Устанавливаем начальную позицию машины
+updateCarPosition();
 
-//     console.log(message);
+window.addEventListener("scroll", () => {
+  const car = document.querySelector(".car");
+  const trackLeft = document.querySelector(".track-left");
+  const trackRight = document.querySelector(".track-right");
+  const messageTestDrive = document.querySelector(".testDrive-message");
 
-//     axios
-//       .post(URI_API, {
-//         chat_id: CHATT_ID,
-//         parse_mode: "html",
-//         text: message,
-//       })
-//       .then((res) => {})
-//       .catch((err) => {})
-//       .finally(() => {
-//         console.log("Конец");
-//         form.submit(); // отправляем форму после успешной отправки данных
-//       });
-//   }
-// });
+  const carRect = car.getBoundingClientRect();
+  const carCenter = carRect.left + carRect.width / 2;
 
-// // Обработка отправки формы
-// form.addEventListener("submit", function (e) {
-//   e.preventDefault(); // предотвращаем отправку формы через submit, так как уже отправляем через click
-// });
+  // Найдите центр следов
+  const trackLeftRect = trackLeft.getBoundingClientRect();
+  const trackRightRect = trackRight.getBoundingClientRect();
+  const messageTestDriveRect = messageTestDrive.getBoundingClientRect();
+  const trackLeftCenter = trackLeftRect.left + trackLeftRect.width / 2;
+  const trackRightCenter = trackRightRect.left + trackRightRect.width / 2;
+  const messageTestDriveCenter =
+    messageTestDrive.left + messageTestDriveRect.width / 2;
 
-// const form = document.getElementById("tgForm");
-// const submitBtn = document.getElementById("btnSendform");
+  // Если центр машины пересекает центр следа, показываем след
+  if (carCenter > trackLeftCenter) {
+    trackLeft.classList.add("show");
+  } else {
+    trackLeft.classList.remove("show");
+  }
 
-// const TOKEN = "7276650181:AAHlTP9WN0aK8GLVjwMeYABk1uBDNyBc2Ik";
-// const CHATT_ID = "-1002228237081";
-// const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+  if (carCenter > trackRightCenter) {
+    trackRight.classList.add("show");
+  } else {
+    trackRight.classList.remove("show");
+  }
 
-// form.addEventListener("submit", function (e) {
-//   e.preventDefault();
-
-//   let message = `<b>Заявка на участие!</b>\n`;
-//   message += `<b>Имя и Фамилия</b>: ${this.tgInputName.value}\n`;
-//   message += `<b>Участие</b>: ${this.tgSelectAvailableMob.value}\n`;
-//   message += `<b>Участие</b>: ${this.tgSelectAvailableDesk.value}\n`;
-//   message += `<b>Test-Drive</b>: ${this.tgSelectDrive.value}\n`;
-
-//   console.log(message);
-
-//   axios
-//     .post(URI_API, {
-//       chat_id: CHATT_ID,
-//       parse_mode: "html",
-//       text: message,
-//     })
-//     .then((res) => {})
-//     .catch((err) => {})
-//     .finally(() => {
-//       console.log("Конец");
-//     });
-// });
-
-// $("#btn_sendform-js").click(function (event) {
-//   let check = 0;
-
-//   if (!validateEmail(jQuery("#input_email").val())) {
-//     check++;
-//     jQuery("#input_email").css("border", "1px solid red");
-//   }
-//   if (jQuery("#input_name").val().length < 3) {
-//     check++;
-//     jQuery("#input_name").css("border", "1px solid red");
-//   }
-//   if (check == 0) {
-//     $.ajax({
-//       url: "/wp-admin/admin-ajax.php",
-//       type: "POST",
-//       data: {
-//         action: "get_form",
-//         firstname: jQuery("#input_name").val(),
-//         "email-adress": jQuery("#input_email").val(),
-//         telephone: jQuery("#input_phone").val(),
-//         message: jQuery("#input_message").val(),
-//       }, // можно также передать в виде массива или объекта
-//       success: function (data) {
-//         console.log(data);
-//         $(".form-inputs").css("opacity", "0");
-//         $(".form-success").css("opacity", "1");
-//       },
-//     });
-//   } else {
-//     jQuery("#btn_sendform").addClass("form-error");
-//     setTimeout(function () {
-//       jQuery("#btn_sendform").removeClass("form-error");
-//     }, 1000);
-//   }
-// });
+  if (carCenter > messageTestDriveCenter) {
+    messageTestDrive.classList.remove("show");
+    messageTestDrive.classList.add("hidden");
+  } else {
+  }
+  messageTestDrive.classList.add("show");
+  messageTestDrive.classList.remove("hidden");
+});

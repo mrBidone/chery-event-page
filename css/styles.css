@@ -892,3 +892,69 @@ body {
     bottom: 113px;
   }
 }
+
+/* AUTO-ANIMATION */
+
+/* Основной контейнер */
+.car-section {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.car-animation {
+  position: relative;
+}
+.animation-container {
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Машина */
+.car {
+  position: absolute;
+  top: -5px;
+  transform: translateY(0%) translateX(100%);
+  transition: transform 0.3s ease-out;
+  z-index: 9999;
+}
+
+/* След */
+/* Изначально следы скрыты */
+.track-left,
+.track-right {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.track-right {
+  margin-top: 35px;
+  margin-bottom: 32px;
+}
+
+.track-left {
+  margin-bottom: 55px;
+}
+
+/* Сообщение */
+.testDrive-message {
+  max-width: 178px;
+  height: 50px;
+  font-family: "Caveat", sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 1.08696;
+  margin: 0 auto;
+  color: #ca0100;
+  margin-bottom: 31px;
+  transition: opacity 0.5s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
