@@ -972,4 +972,8 @@ body {
   .tracks-left-wrapper {
     margin-bottom: 55px;
   }
+
+  .show {
+    opacity: 1;
+  }
 }
