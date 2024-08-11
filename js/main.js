@@ -69,9 +69,12 @@ form.addEventListener("submit", function (e) {
     });
 });
 
-// Получаем элементы
 const car = document.querySelector(".car");
 const section = document.querySelector(".car-section");
+const trackLeft = document.querySelector(".track-left");
+const trackRight = document.querySelector(".track-right");
+const messageTestDrive = document.querySelector(".testDrive-message");
+const carContainer = document.querySelector(".car-container");
 
 // Функция для обновления позиции машины при скролле
 function updateCarPosition() {
@@ -100,13 +103,11 @@ window.addEventListener("scroll", updateCarPosition);
 updateCarPosition();
 
 window.addEventListener("scroll", () => {
-  const car = document.querySelector(".car");
-  const trackLeft = document.querySelector(".track-left");
-  const trackRight = document.querySelector(".track-right");
-  const messageTestDrive = document.querySelector(".testDrive-message");
-
   const carRect = car.getBoundingClientRect();
   const carCenter = carRect.left + carRect.width / 2;
+
+  const containerRect = carContainer.getBoundingClientRect();
+  // const containerCenter = containerRect.left +
 
   // Найдите центр следов
   const trackLeftRect = trackLeft.getBoundingClientRect();
@@ -115,26 +116,28 @@ window.addEventListener("scroll", () => {
   const trackLeftCenter = trackLeftRect.left + trackLeftRect.width / 2;
   const trackRightCenter = trackRightRect.left + trackRightRect.width / 2;
   const messageTestDriveCenter =
-    messageTestDrive.left + messageTestDriveRect.width / 2;
+    messageTestDriveRect.left + messageTestDriveRect.width / 2;
+
+  // console.log(messageTestDrive);
+  // console.log(messageTestDriveRect);
+  // console.log(messageTestDriveCenter);
 
   // Если центр машины пересекает центр следа, показываем след
-  if (carCenter > trackLeftCenter) {
-    trackLeft.classList.add("show");
-  } else {
-    trackLeft.classList.remove("show");
-  }
+  // if (carCenter > trackLeftCenter) {
+  //   trackLeft.classList.add("show");
+  // } else {
+  //   trackLeft.classList.remove("show");
+  // }
 
-  if (carCenter > trackRightCenter) {
-    trackRight.classList.add("show");
-  } else {
-    trackRight.classList.remove("show");
-  }
+  // if (carCenter > trackRightCenter) {
+  //   trackRight.classList.add("show");
+  // } else {
+  //   trackRight.classList.remove("show");
+  // }
 
-  if (carCenter > messageTestDriveCenter) {
+  if (carCenter < messageTestDriveCenter) {
+    messageTestDrive.classList.add("show");
+  } else {
     messageTestDrive.classList.remove("show");
-    messageTestDrive.classList.add("hidden");
-  } else {
   }
-  messageTestDrive.classList.add("show");
-  messageTestDrive.classList.remove("hidden");
 });

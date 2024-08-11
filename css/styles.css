@@ -938,6 +938,7 @@ body {
 
 /* Сообщение */
 .testDrive-message {
+  opacity: 0;
   max-width: 178px;
   height: 50px;
   font-family: "Caveat", sans-serif;
