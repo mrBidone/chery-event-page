@@ -897,7 +897,7 @@ body {
 .car-section {
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: 10px;
+  padding-bottom: 0;
 }
 
 .car-animation {
@@ -936,7 +936,7 @@ body {
 
 .tracks-left-wrapper {
   display: flex;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
 }
 
 .testDrive-message {
