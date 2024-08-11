@@ -227,8 +227,7 @@ body {
   width: 21px;
   height: 21px;
 }
-.list-date-item {
-}
+
 .list-title {
   font-size: 13px;
   line-height: 1.2;
@@ -902,10 +901,11 @@ body {
 
 .car-animation {
   position: relative;
+  overflow: hidden;
 }
+
 .animation-container {
   margin: 0 auto;
-  width: 100%;
   overflow: hidden;
 }
 
