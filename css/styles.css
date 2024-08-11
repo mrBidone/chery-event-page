@@ -877,7 +877,7 @@ body {
   height: 60px;
   border-radius: 50%;
   background-color: rgba(101, 166, 255, 0.2);
-  left: 90px;
+  left: 91px;
   bottom: 81px;
   animation: 1s puls infinite;
   z-index: 110;
@@ -888,7 +888,7 @@ body {
     bottom: 130px;
   }
   .location_large {
-    left: 240px;
+    left: 241px;
     bottom: 113px;
   }
 }
