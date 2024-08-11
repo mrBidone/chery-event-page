@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./img/svg/favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter+Tight:wght@600&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles-en.css" />
+    <title>Official distributor of Chery brand in Tajikistan</title>
+  </head>
+  <body>
+    <div class="bg-img-thumb">
+    <header class="header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <ul class="nav-list">
+            <li class="nav-list-item">
+                <svg class="header-links-icon chery-logo">
+                  <use
+                    class="chery-logo-icon"
+                    href="../img/svg/sprite.svg#icon-chery-logo"
+                  ></use>
+                </svg>
+            </li>
+            <li class="nav-list-item">
+                <svg class="header-links-icon koinot-logo">
+                  <use
+                    class="koinot-logo-icon"
+                    href="../img/svg/sprite.svg#icon-koinot"
+                  ></use>
+                </svg>
+            </li>
+          </ul>
+          <a class="header-call-btn" href="tel:1118">
+            <svg class="header-btn-icon" width="16" height="16">
+              <use href="../img/svg/sprite.svg#icon-tel"></use>
+            </svg>
+            <span class="call-btn-text">1118</span>
+          </a>
+        </div>
+        <p class="button-desc">contact information</p>
+      </div>
+    </header>
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-img-thumb">
+            <div class="date-wrapper">
+              <ul class="list-date">
+                <li class="list-date-item">
+                  <p class="list-title">date</p>
+                </li>
+                <li class="list-date-item">
+                  <p class="list-desc">August 16th</p>
+                </li>
+              </ul>
+              <ul class="list-time">
+                <li class="list-time-item">
+                  <p class="list-title">time</p>
+                </li>
+                <li class="list-time-item">
+                  <p class="list-desc">7:00&nbsp;pm</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Invitation section -->
+      <section class="invitation">
+        <div class="container">
+          <div class="section">
+            <h1 class="main-title">Dear friends,</h1>
+            <ul class="invitation-list">
+              <li class="invitation-list-item">
+                <p>
+                  We are delighted to invite you to the event dedicated to the launch of the CHERY brand in Tajikistan, which will take place on
+                  <span class="accent-text">August 16, at&nbsp;pm7:00&nbsp;pm.</span>
+                </p>
+              </li>
+              <li class="invitation-list-item">
+                <p>
+                  It is a great honor for us to share this special day with you. We would be happy to see you among the guests and celebrate the opening of the new CHERY dealership!
+                </p>
+              </li>
+              <li class="invitation-list-item">
+                <p>Best regards<br />CHERY Tajikistan</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Invite-form Section -->
+      <section class="invite-form">
+        <div class="container">
+          <div class="section">
+            <h2 class="section-title">
+              Please confirm your attendance
+            </h2>
+            <p class="section-desc">
+              To ensure a comfortable organization of the event, we kindly ask you to confirm your attendance by filling out the form below.
+            </p>
+            <form class="form" action="" id="tgForm">
+              <ul class="form-list">
+                <li>
+                  <input
+                  name="tgInputName"
+                    class="form-style input-form"
+                    type="text"
+                    placeholder="First and Last Name"
+                  />
+                </li>
+                <li>
+                  <div class="select select-mob">
+                    <select class="select-control" name="tgSelectAvailableMob" id="">
+                      <option value="10" selected>Your presence</option>
+                      <option value="Да">Yes, I can't attend</option>
+                      <option value="Нет">No, I can't attend</option>
+                    </select>
+                    <span class="select-icon"></span>
+                  </div>
+                  <div class="select select-desk">
+                    <select class="select-control" name="tgSelectAvailableDesk" id="" >
+                      <option value="101" selected>Will you be able to attend?</option>
+                      <option value="Да">Yes, I can't attend</option>
+                      <option value="Нет">No, I can't attend</option>
+                    </select>
+                    <span class="select-icon"></span>
+                  </div>
+                </li>
+                <li>
+                  <div class="select">
+                  <select class="select-control" name="tgSelectDrive" id="">
+                  <option value="20">Test drive</option>
+                  <option value="Да">Yes, I can attend</option>
+                  <option value="Нет">No, I can attend</option>
+                  </select>
+                  <span class="select-icon"></span>
+                  </div>
+
+                </li>
+              </ul>
+              <button id="btnSendform" class="submit-btn" type="submit">Submit</button>
+            <div id="messageBlock" class="message-block visually-hidden">
+              <p class="text-message">Thank you! You message sent!</p>
+            </div>
+            </form>
+            
+          </div>
+        </div>
+      </section>
+      <section class="car-animation">
+        <div class="container">
+          <div class="section car-section">
+            <div class="animation-container">
+              <div class="car-container">
+                <img src="../img/car.webp" alt="Машина Chery" class="car" width="495" height="294"/>
+              </div>
+              <div class="tracks-right-wrapper">
+                <img src="../img/track@2x.png" alt="След" class="track-right-first" width="296" height="20"/>
+                <img src="../img/track@2x.png" alt="След" class="track-right-second" width="296" height="20"/>
+              </div>
+                <div class=""><p class="testDrive-message">Take a test drive in the brand-new Chery</p></div>
+                <div class="tracks-left-wrapper">
+                  <img src="../img/track@2x.png" alt="След" class="track-left-first" width="296" height="20"/>
+                  <img src="../img/track@2x.png" alt="След" class="track-left-second" width="296" height="20"/>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Program -section -->
+      <section class="program">
+        <div class="container">
+          <div class="section">
+            <h2 class="section-title program-title">Event program</h2>
+            <ul class="program-list">
+              <li class="program-list-item">
+                <span class="program-time">7:00&nbsp;pm</span>
+                <p>Gathering of guests</p>
+              </li>
+              <li class="program-list-item">
+                <span class="program-time">8:00&nbsp;pm</span>
+                <p class="program-desc">Start of the official part of Ceremony</p>
+              </li>
+              <li class="program-list-item">
+                <span class="program-time">8:30&nbsp;pm</span>
+                <p class="program-desc">
+                  Presentation of CHERY’s latest flagship car models
+                </p>
+              </li>
+              <li class="program-list-item">
+                <span class="program-time">8:50&nbsp;pm</span>
+                <p class="program-desc">Performance "Chery Chery Lady"</p>
+              </li>
+              <li class="program-list-item">
+                <span class="program-time">9:00&nbsp;pm</span>
+                <p class="program-desc">Performance of the artist - M.one</p>
+              </li>
+              <li class="program-list-item">
+                <span class="program-time">9:30&nbsp;pm</span>
+                <p class="program-desc">
+                  Prize draw, DJ set (After party)
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      </div>
+      <!-- Place-ivent section -->
+      <section class="place-ivent">
+        <div class="container">
+          <div class="section bg-thumb">
+            <h2 class="section-title place-ivent-title">
+              Event location
+            </h2>
+            <p class="place-desc">
+              To make things easier for you, we’ve placed the location coordinates on the map.
+            </p>
+            <ul class="adress-list">
+              <li class="">
+                <a class="adress-list-item list-point-icon " href="https://maps.app.goo.gl/pGspeMBb1rVUh4iu6" aria-label="Google maps" target="_blank" rel="noopener noreferrer">
+                  <p class="adress-desc">2/2 Huvaydulloev Street, Diyar Dushanbe.</p>
+                </a>
+              </li>
+              <li class=" ">
+                <a class="adress-list-item list-tel-icon" href="tel:1118"><p class="adress-desc">1118</p></a>
+              </li>
+            </ul>
+            <a class="" href="https://maps.app.goo.gl/pGspeMBb1rVUh4iu6" aria-label="Google maps" target="_blank" rel="noopener noreferrer">
+                            <div class="location_small"></div>
+                            <div class="location_large"></div>
+                        </a>
+            
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-list-wrapper">
+          <ul class="nav-list">
+            <li class="nav-list-item">
+                <svg class="header-links-icon chery-logo footer-chery-logo">
+                  <use
+                    class="chery-logo-icon footer-chery-logo-icon"
+                    href="../img/svg/sprite.svg#icon-chery-logo"
+                  ></use>
+                </svg>
+            </li>
+            <li class="nav-list-item">
+                <svg class="header-links-icon koinot-logo footer-koinot-logo">
+                  <use
+                    class="koinot-logo-icon footer-koinot-logo-icon"
+                    href="../img/svg/sprite.svg#icon-koinot"
+                  ></use>
+                </svg>
+            </li>
+          </ul>
+          <ul class="footer-social-list-desk">
+            <li class="social-list-item">
+              <a class="social-link" href="https://www.instagram.com/chery_tj/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <svg class="social-link-icon" width="14" height="14" >
+                  <use href="../img/svg/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a class="social-link" href="https://www.facebook.com/profile.php?id=61560500240718" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <svg class="social-link-icon" width="7" height="14">
+                  <use href="../img/svg/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a class="social-link" href="https://t.me/cherytajikistan" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+                <svg class="social-link-icon" width="14" height="12">
+                  <use href="../img/svg/sprite.svg#icon-telegram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer-desc-list">
+          <li class="desc-list-item">
+            <p>
+              We are at the cutting edge of the automotive industry, dedicated to offering not just vehicles but also an unparalleled driving experience.
+            </p>
+          </li>
+          <li class="desc-list-item">
+            <p>
+              2024, Chery Automobile Corporate Limited. <br />All rights reserved.
+            </p>
+          </li>
+        </ul>
+        <ul class="footer-social-list-mob">
+          <li class="social-list-item">
+            <a class="social-link" href="https://www.instagram.com/chery_tj/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg class="social-link-icon" width="18" height="18">
+                <use href="../img/svg/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a class="social-link" href="https://www.facebook.com/profile.php?id=61560500240718" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg class="social-link-icon" width="9" height="18">
+                <use href="../img/svg/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list-item">
+            <a class="social-link" href="https://t.me/cherytajikistan" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+              <svg class="social-link-icon" width="18" height="15">
+                <use href="../img/svg/sprite.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../js/main.js"></script>
+  </body>
+</html>
