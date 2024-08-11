@@ -895,7 +895,6 @@ body {
 
 /* AUTO-ANIMATION */
 
-/* Основной контейнер */
 .car-section {
   padding-left: 0;
   padding-right: 0;
@@ -910,35 +909,32 @@ body {
   overflow: hidden;
 }
 
-/* Машина */
 .car {
   position: absolute;
-  top: -5px;
+  top: -30px;
   transform: translateY(0%) translateX(100%);
   transition: transform 0.3s ease-out;
   z-index: 9999;
 }
 
-/* След */
-/* Изначально следы скрыты */
 .track-right-first,
 .track-right-second,
 .track-left-first,
 .track-left-second {
+  width: 156px;
   opacity: 0;
 }
 .tracks-right-wrapper {
   display: flex;
-  margin-top: 35px;
+  margin-top: 25px;
   margin-bottom: 32px;
 }
 
 .tracks-left-wrapper {
   display: flex;
-  margin-bottom: 55px;
+  margin-bottom: 35px;
 }
 
-/* Сообщение */
 .testDrive-message {
   opacity: 0;
   max-width: 178px;
@@ -955,4 +951,25 @@ body {
 
 .show {
   opacity: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .car {
+    top: -5px;
+  }
+
+  .track-right-first,
+  .track-right-second,
+  .track-left-first,
+  .track-left-second {
+    opacity: 0;
+    width: 296px;
+  }
+  .tracks-right-wrapper {
+    margin-top: 35px;
+  }
+
+  .tracks-left-wrapper {
+    margin-bottom: 55px;
+  }
 }
