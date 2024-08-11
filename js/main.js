@@ -71,8 +71,10 @@ form.addEventListener("submit", function (e) {
 
 const car = document.querySelector(".car");
 const section = document.querySelector(".car-section");
-const trackLeft = document.querySelector(".track-left");
-const trackRight = document.querySelector(".track-right");
+const trackLeftF = document.querySelector(".track-left-first");
+const trackLeftS = document.querySelector(".track-left-second");
+const trackRightF = document.querySelector(".track-right-first");
+const trackRightS = document.querySelector(".track-right-second");
 const messageTestDrive = document.querySelector(".testDrive-message");
 const carContainer = document.querySelector(".car-container");
 
@@ -105,35 +107,36 @@ updateCarPosition();
 window.addEventListener("scroll", () => {
   const carRect = car.getBoundingClientRect();
   const carCenter = carRect.left + carRect.width / 2;
+  const carRectRight = carRect.right - 60;
+  const carRectLeft = carRect.left + 70;
 
   const containerRect = carContainer.getBoundingClientRect();
-  // const containerCenter = containerRect.left +
+  const containerCenter = containerRect.left + containerRect.width / 2;
 
   // Найдите центр следов
-  const trackLeftRect = trackLeft.getBoundingClientRect();
-  const trackRightRect = trackRight.getBoundingClientRect();
+  // const trackLeftRect = trackLeft.getBoundingClientRect();
+  // const trackRightRect = trackRight.getBoundingClientRect();
   const messageTestDriveRect = messageTestDrive.getBoundingClientRect();
-  const trackLeftCenter = trackLeftRect.left + trackLeftRect.width / 2;
-  const trackRightCenter = trackRightRect.left + trackRightRect.width / 2;
+  // const trackLeftCenter = trackLeftRect.left + trackLeftRect.width / 2;
+  // const trackRightCenter = trackRightRect.left + trackRightRect.width / 2;
   const messageTestDriveCenter =
     messageTestDriveRect.left + messageTestDriveRect.width / 2;
 
-  // console.log(messageTestDrive);
-  // console.log(messageTestDriveRect);
-  // console.log(messageTestDriveCenter);
+  if (carRectLeft < containerCenter) {
+    trackLeftS.classList.add("show");
+    trackRightS.classList.add("show");
+  } else {
+    trackLeftS.classList.remove("show");
+    trackRightS.classList.remove("show");
+  }
 
-  // Если центр машины пересекает центр следа, показываем след
-  // if (carCenter > trackLeftCenter) {
-  //   trackLeft.classList.add("show");
-  // } else {
-  //   trackLeft.classList.remove("show");
-  // }
-
-  // if (carCenter > trackRightCenter) {
-  //   trackRight.classList.add("show");
-  // } else {
-  //   trackRight.classList.remove("show");
-  // }
+  if (carRectRight < containerCenter) {
+    trackLeftF.classList.add("show");
+    trackRightF.classList.add("show");
+  } else {
+    trackLeftF.classList.remove("show");
+    trackRightF.classList.remove("show");
+  }
 
   if (carCenter < messageTestDriveCenter) {
     messageTestDrive.classList.add("show");

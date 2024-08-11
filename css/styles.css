@@ -921,18 +921,20 @@ body {
 
 /* След */
 /* Изначально следы скрыты */
-.track-left,
-.track-right {
-  opacity: 1;
-  transition: opacity 0.5s ease;
+.track-right-first,
+.track-right-second,
+.track-left-first,
+.track-left-second {
+  opacity: 0;
 }
-
-.track-right {
+.tracks-right-wrapper {
+  display: flex;
   margin-top: 35px;
   margin-bottom: 32px;
 }
 
-.track-left {
+.tracks-left-wrapper {
+  display: flex;
   margin-bottom: 55px;
 }
 
@@ -948,12 +950,7 @@ body {
   margin: 0 auto;
   color: #ca0100;
   margin-bottom: 31px;
-  transition: opacity 0.5s ease;
-}
-
-.hidden {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 200ms ease;
 }
 
 .show {
