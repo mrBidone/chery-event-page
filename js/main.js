@@ -92,7 +92,7 @@ function updateCarPosition() {
   );
 
   // Смещение машины (от 100% до -100%)
-  const translateX = 100 - scrollPercentage * 1000;
+  const translateX = 10 - scrollPercentage * 100;
   console.log(translateX);
 
   // Обновляем стиль трансформации для машины
