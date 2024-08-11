@@ -87,13 +87,13 @@ function updateCarPosition() {
 
   // Процент прокрутки внутри секции
   const scrollPercentage = Math.min(
-    Math.max((windowHeight - sectionTop) / (windowHeight + sectionHeight), 0.2),
+    Math.max((windowHeight - sectionTop) / (windowHeight + sectionHeight), 0),
     1
   );
 
   // Смещение машины (от 100% до -100%)
-  const translateX = 10 - scrollPercentage * 100;
-  console.log(translateX);
+  const translateX = -10 - scrollPercentage * 90;
+  // console.log(translateX);
 
   // Обновляем стиль трансформации для машины
   car.style.transform = `translateX(${translateX}%)`;
