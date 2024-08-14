@@ -2,8 +2,8 @@ const form = document.getElementById("tgForm");
 const submitBtn = document.getElementById("btnSendform");
 const messageBlock = document.getElementById("messageBlock");
 
-const TOKEN = "7276650181:AAHlTP9WN0aK8GLVjwMeYABk1uBDNyBc2Ik";
-const CHATT_ID = "-1002228237081";
+const TOKEN = "7062450367:AAGBNkdz-ZlDbzh0Tiqd_02KvnAIT36srxM";
+const CHATT_ID = "-1002182049903";
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 form.addEventListener("submit", function (e) {
