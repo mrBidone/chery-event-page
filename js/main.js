@@ -20,9 +20,6 @@ form.addEventListener("submit", function (e) {
     setTimeout(function () {
       submitBtn.classList.remove("form-error");
     }, 1000);
-    // console.log(
-    //   "Ошибка: Поле 'Имя и Фамилия' должно быть заполнено и содержать только буквы."
-    // );
     return;
   } else if (
     availableMob !== "Да" &&
@@ -34,14 +31,12 @@ form.addEventListener("submit", function (e) {
     setTimeout(function () {
       submitBtn.classList.remove("form-error");
     }, 1000);
-    // console.log("Ошибка: Не выбран обязательный вариант ");
     return;
   } else if (driveParticipation !== "Да" && driveParticipation !== "Нет") {
     submitBtn.classList.add("form-error");
     setTimeout(function () {
       submitBtn.classList.remove("form-error");
     }, 1000);
-    // console.log("Ошибка: Не выбран обязательный вариант ");
     return;
   }
   submitBtn.classList.remove("form-error");
@@ -109,7 +104,6 @@ window.addEventListener("scroll", () => {
   const messageTestDriveRect = messageTestDrive.getBoundingClientRect();
   const messageTestDriveCenter =
     messageTestDriveRect.left + messageTestDriveRect.width / 2;
-
   if (carRectLeft < containerCenter) {
     trackLeftS.classList.add("show");
     trackRightS.classList.add("show");
@@ -117,7 +111,6 @@ window.addEventListener("scroll", () => {
     trackLeftS.classList.remove("show");
     trackRightS.classList.remove("show");
   }
-
   if (carRectRight < containerCenter) {
     trackLeftF.classList.add("show");
     trackRightF.classList.add("show");
@@ -125,7 +118,6 @@ window.addEventListener("scroll", () => {
     trackLeftF.classList.remove("show");
     trackRightF.classList.remove("show");
   }
-
   if (carCenter < messageTestDriveCenter) {
     messageTestDrive.classList.add("show");
   } else {
