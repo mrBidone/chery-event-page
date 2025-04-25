@@ -83,7 +83,13 @@ function updateCarPosition() {
     1
   );
 
-  const translateX = -10 - scrollPercentage * 90;
+  let translateX;
+
+  if (window.innerWidth >= 768) {
+    translateX = 130 - scrollPercentage * 230;
+  } else {
+    translateX = 100 - scrollPercentage * 250;
+  }
 
   car.style.transform = `translateX(${translateX}%)`;
 }
