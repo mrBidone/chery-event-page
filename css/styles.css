@@ -982,7 +982,7 @@ body {
   margin: 0 auto;
   color: #ca0100;
   margin-bottom: 14px;
-  transition: opacity 200ms ease;
+  transition: opacity 100ms ease;
 }
 
 .show {
